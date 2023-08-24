@@ -22,7 +22,19 @@ const Login = () => {
                     <div className="p-5">
                         <img src={logo} alt="logo" width="130px" />
                     </div>
-
+                    <div className="shadow-2xl">
+                        <GoogleLogin
+                            clientId=''
+                            render={(renderProps) => (
+                                <button
+                                    type="button"
+                                    className="bg-mainColor flex justify-center items-center p-3 rounded-lg"
+                                >
+                                    <FcGoogle className="mr-4" />Sign in with google
+                                </button>
+                            )}
+                        />
+                    </div>
                 </div>
 
             </div>
