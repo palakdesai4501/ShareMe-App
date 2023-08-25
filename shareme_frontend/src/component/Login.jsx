@@ -8,7 +8,8 @@ import logo from '../assets/logowhite.png'
 const Login = () => {
 
     const responseGoogle = (response) => {
-        console.log(response);
+        localStorage.setItem('user', JSON.stringify(response.profileObj))
+
     }
     return (
         <div className="flex justify-start items-center flex-col h-screen">
@@ -16,7 +17,7 @@ const Login = () => {
                 <video
                     src={shareVideo}
                     type="video/mp4"
-                    Loop
+                    loop
                     controls={false}
                     muted
                     autoPlay
