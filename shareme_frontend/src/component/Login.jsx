@@ -11,7 +11,13 @@ const Login = () => {
         localStorage.setItem('user', JSON.stringify(response.profileObj))
 
         const {name, googleId, imageUrl } = response.profileObj;
-
+    
+        const doc ={
+            _id: googleId,
+            _type: 'user',
+            userName: name,
+            image: imageUrl,
+        }
     }
     return (
         <div className="flex justify-start items-center flex-col h-screen">
